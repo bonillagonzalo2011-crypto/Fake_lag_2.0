@@ -18,11 +18,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Compilar APK (Debug)
-        run: ./gradlew assembleDebug
+      - name: Configurar entorno Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Compilar APK
+        run: gradle assembleDebug
 
       - name: Subir APK generado a Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: '**/build/outputs/apk/debug/*.apk'
