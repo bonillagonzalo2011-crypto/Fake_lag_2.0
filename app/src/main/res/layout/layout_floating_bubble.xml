@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <ImageButton
+        android:id="@+id/btnFreezer"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_circle_bubble"
+        android:contentDescription="Freezer"
+        android:elevation="6dp"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_media_pause" />
+
+    <!-- Cuenta regresiva (3.0, 2.9, ...) que se muestra sobre el botón mientras la red está cortada -->
+    <TextView
+        android:id="@+id/tvCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="3.0"
+        android:textColor="#00E676"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</FrameLayout>
