@@ -18,9 +18,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Dar permisos de ejecución a Gradle
-        run: chmod +x gradlew
-
       - name: Compilar APK (Debug)
         run: ./gradlew assembleDebug
 
